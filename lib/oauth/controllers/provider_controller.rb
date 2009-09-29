@@ -53,10 +53,12 @@ module OAuth
               end
               
               if @redirect_url
+                redirect_params_glue = @redirect_url.index("?").nil? ? "?" : "&"
+                
                 if @token.oauth10?
-                  redirect_to "#{@redirect_url}?oauth_token=#{@token.token}"
+                  redirect_to "#{@redirect_url}#{redirect_params_glue}oauth_token=#{@token.token}"
                 else
-                  redirect_to "#{@redirect_url}?oauth_token=#{@token.token}&oauth_verifier=#{@token.verifier}"
+                  redirect_to "#{@redirect_url}#{redirect_params_glue}oauth_token=#{@token.token}&oauth_verifier=#{@token.verifier}"
                 end
               else
                 render :action => "authorize_success"
