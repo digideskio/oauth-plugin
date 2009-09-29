@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version = "0.3.11"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Pelle Braendgaard", "Filip Tepper"]
-  s.date = %q{2009-09-21}
+  s.authors = ["Pelle Braendgaard"]
+  s.date = %q{2009-09-26}
   s.description = %q{Rails plugin for implementing an OAuth Provider or Consumer}
   s.email = %q{oauth-ruby@googlegroups.com}
   s.extra_rdoc_files = [
